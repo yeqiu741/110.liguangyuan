@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import '../App.js';
+
 
 export default class dailog_add extends Component{
     setMessage=()=>{
         this.props.conhandleMessage(this.refs.title.value,this.refs.description.value,this.refs.time.value);
-        console.log(this.refs.title.value,this.refs.description.value,this.refs.time.value);
     }
     render(){
         return(

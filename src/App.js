@@ -83,35 +83,7 @@ class App extends Component {
         time : '19：30' , 
         button : '更多'
       }
-      ,
-        {
-        icon : icon2,
-        name : '叶秋',
-        description : '走，KTV走一波？',
-        time : '14：39' , 
-        button : '更多'
-       },
-       {
-        icon : icon3,
-        name : '王伟',
-        description : '你干啥呢？',
-        time : '15：10', 
-        button : '更多' 
-      },
-      {
-        icon : icon4,
-        name : '知你故来风',
-        description : '兄弟，明天记得交作业',
-        time : '18：59' , 
-        button : '更多'
-      },
-      {
-        icon : icon5,
-        name : '小妹',
-        description : '哥，回家吃饭了。',
-        time : '19：30' , 
-        button : '更多'
-      }
+     
     ],
     navBottom:[
       {
@@ -192,22 +164,23 @@ class App extends Component {
   }
   renderMessageBox = ()=>{//中部信息栏组件
     const content = this.state.messageBox.map((item,idx) =>{
-      return <MessageBox key={idx} item={item} itemIndex={idx} idx1={this.handelindex} dailogMany={this.onManyClick}/>
+      return <MessageBox key={idx} item={item} idx={idx} onClick={this.handelindex}  dailogMany={this.onManyClick}/>
     })
     return content;
   }
-  //待改进
-  handelindex=(idx1)=>{
+
+  handelindex=(idx)=>{
     this.setState({
-      index:idx1
+      index:idx
     })
   }
 
+
   //删除按钮的处理函数
-  handleMessageD=()=>{
+  handleMessageD=(idx)=>{
     const{messageBox} = this.state;
     const newMess = messageBox.slice();
-    newMess.splice(this.state.index,1);
+    newMess.splice(idx,1);
     this.setState({
       messageBox:newMess
     });
@@ -217,10 +190,10 @@ class App extends Component {
   }
 
   //置顶按钮的处理函数
-  handleUpMessage=()=>{
+  handleUpMessage=(idx)=>{
     const{messageBox} = this.state;
     const newMess = messageBox.slice();
-    const arr = newMess.splice(this.state.index,1);
+    const arr = newMess.splice(idx,1);
     newMess.unshift(arr[0]);
     this.setState({
       messageBox:newMess

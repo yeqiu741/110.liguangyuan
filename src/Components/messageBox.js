@@ -3,16 +3,18 @@ import '../App.js';
 
 
 export default class messageBox extends Component{
-  constructor(props){
-    super(props);
+  manyStep=()=>{
+    this.props.dailogMany();
+    const {onClick,idx}=this.props;
+    if (onClick){
+      onClick(idx);
+    }
   }
-  handlemany=()=>{
-    this.props.idx1(this.props.itemIndex);
-  }
- 
+
   render(){
     const {item} = this.props;
-    return(       
+    return(   
+      <div>    
             <li>
               <img src={item.icon} alt="图片加载失败！" />
               <div className="messageBoxTitelDescription">
@@ -21,9 +23,10 @@ export default class messageBox extends Component{
               </div>
               <div className="messageBoxTimeMany">
                 <p className="pTime">{item.time}</p>
-                <button onClick={this.props.dailogMany} >{item.button}</button>
+                <button onClick={this.manyStep} >{item.button}</button>
               </div>
            </li>
+      </div>
     )
   }
     

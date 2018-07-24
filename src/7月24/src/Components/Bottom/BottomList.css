@@ -1,0 +1,17 @@
+.navBox{
+	height: 60px;
+	width: 80px;
+	margin-top: 1px;
+}
+.navBox img{
+	width: 30px;
+	height: 30px;
+	margin-top: 4px;
+	margin-left: 25px;
+}
+.navBox p{
+	color: black;
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: -15px;
+}
