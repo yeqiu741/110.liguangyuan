@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+<<<<<<< HEAD
 
+=======
+import '../WeChat.js';
+>>>>>>> 7/25
 
 export default class dailog_add extends Component{
     setMessage=()=>{

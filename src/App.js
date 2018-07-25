@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import Top from './Components/Top/Top';
 import Bottom from './Components//Bottom/Bottom';
@@ -40,8 +41,16 @@ class App extends Component {
         <Middle />
         <Bottom />
       </div>
+=======
+import React,{Component} from 'react';
+import Wechat from './WeChat.js'
+import './App.css'
+  
+export default class App extends React.Component {
+  render() {
+    return (
+        <Wechat />
+>>>>>>> 7/25
     )
   }
 }
-
-export default App;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../App.js';
+import '../WeChat';
 
 
 export default class messageBox extends Component{
@@ -13,9 +13,14 @@ export default class messageBox extends Component{
 
   render(){
     const {item} = this.props;
+<<<<<<< HEAD
     return(   
       <div>    
             <li>
+=======
+    return(       
+            <div className="messageList">
+>>>>>>> 7/25
               <img src={item.icon} alt="图片加载失败！" />
               <div className="messageBoxTitelDescription">
                 <p className="pTitle">{item.name}</p>
@@ -25,8 +30,12 @@ export default class messageBox extends Component{
                 <p className="pTime">{item.time}</p>
                 <button onClick={this.manyStep} >{item.button}</button>
               </div>
+<<<<<<< HEAD
            </li>
       </div>
+=======
+           </div>
+>>>>>>> 7/25
     )
   }
     

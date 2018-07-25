@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+<<<<<<< HEAD
 import './messageBox.js'
 import '../App.js';
+=======
+import '../WeChat.js';
+>>>>>>> 7/25
 
 
 export default class Dailog_many extends Component{

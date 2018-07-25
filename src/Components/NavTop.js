@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import '../App.js';
+import '../WeChat.js';
 
 
 export default class Nav_top extends Component{
