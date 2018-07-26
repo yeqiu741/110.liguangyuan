@@ -1,15 +1,15 @@
-import { DAILOG_ADD, DAILOG_MANY } from '../const/ActionTypes'
+import { ADD_ITEM,DAILOG_ADD } from '../const/ActionTypes'
 
-export function dailogAdd(dailogadd){
-  return {
-      type:DAILOG_ADD,
-    dailogAdd
+export function dailog(dailog){
+   return{
+       type:DAILOG_ADD,
+       dailog
+   }
+ }
+export function addItem(item){
+  return{
+    type:ADD_ITEM,
+    item
   }
 }
 
-export function dailogMany(idx, isCompleted){
-  return {
-      type:ADILOG_MANY,
-    dailogMany
-  }
-}

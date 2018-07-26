@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
-<<<<<<< HEAD
-
-=======
-import '../WeChat.js';
->>>>>>> 7/25
+import '../container/WeChat';
 
 export default class dailog_add extends Component{
     setMessage=()=>{
-        this.props.conhandleMessage(this.refs.title.value,this.refs.description.value,this.refs.time.value);
+        this.props.conhandleMessage({
+            icon:require('../IMG/0.jpg'),
+            name:this.refs.title.value,
+            description:this.refs.description.value,
+            time:this.refs.time.value,
+            button:'更多'
+        }   
+    );
+        console.log(this.refs.title.value,this.refs.description.value,this.refs.time.value);
     }
     render(){
         return(

@@ -1,56 +1,26 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import Top from './Components/Top/Top';
-import Bottom from './Components//Bottom/Bottom';
-import Middle from './Components/Middle/Middle';
-import './App.css';
-
-
-
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-        message:[
-            {
-                title:'微信',
-                dailog:false
-            },
-            {
-                title:'通讯录',
-                dailog:false
-            },
-            {
-                title:'发现',
-                dailog:false
-            },
-            {
-                title:'我',
-                dailog:false
-            }
-        ],
-        flag:false
-    }
-}
-
- 
-  render() {
-    return(
-      <div className="App">
-        <Top />
-        <Middle />
-        <Bottom />
-      </div>
-=======
 import React,{Component} from 'react';
-import Wechat from './WeChat.js'
+import Wechat from './container/WeChat.js'
+import {createStore,applyMiddleware,compose } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer  from './reducers'
+import { createLogger } from 'redux-logger'
 import './App.css'
+
+const logger = createLogger();
+
+const store = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(logger),
+  )
+)
   
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
+      <Provider store={store}>
         <Wechat />
->>>>>>> 7/25
+      </Provider>
     )
   }
 }

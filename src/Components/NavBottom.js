@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import '../WeChat.js';
+import '../container/WeChat';
 
 export default class Nav_bottom extends Component{
     render(){
