@@ -1,26 +1,26 @@
-import React,{Component} from 'react';
-import Wechat from './container/WeChat.js'
-import {createStore,applyMiddleware,compose } from 'redux'
-import { Provider } from 'react-redux'
-import rootReducer  from './reducers'
-import { createLogger } from 'redux-logger'
+import React, { Component } from 'react';
+import Header from './Components/Header.js';
+import TabBar from './Components/TabBar.js';
+import NavButton from './Components/TabBar/NavButton.js';
+import Tables from './Components/TabBar/Tables.js';
+
+
 import './App.css'
 
-const logger = createLogger();
 
-const store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(logger),
-  )
-)
-  
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <Wechat />
-      </Provider>
+     
+      <div className="App">
+        <Header />
+        <TabBar />
+        <NavButton />
+        <Tables />
+      </div>
+
     )
   }
 }
+
+export default App;
