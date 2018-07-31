@@ -1,4 +1,9 @@
 import { ADD_MESSAGE } from '../const/ActionTypes.js';
+import React ,{Component} from 'react'
+import './index.css'
+import {Icon} from 'antd'
+
+
 
 const init_List={
     dataSource: [
@@ -66,9 +71,13 @@ const init_List={
   
     columns : [
             {
-                key: 'class',
+               
                 title: '班级',
                 dataIndex: 'class',
+                render:text=>{return(
+                    <div>{<Icon type="exclamation-circle" />}{text}</div>)
+                }
+        
             }, 
             {
                 title: '课程状态',
@@ -84,31 +93,97 @@ const init_List={
                 key: 'teacher',
                 title: '老师',
                 dataIndex: 'teacher',
+                render:text=>{
+                    return(
+                    <div>{<Icon type="user" />}{text}</div>)
+                }
             }, 
             {
                 key: 'studylv',
                 title: '上课率',
                 dataIndex: 'studylv',
+                render:text=>{
+                        let num = parseFloat(text);
+                        let num1 = parseFloat(text.split("/")[1],10)
+                        let num2 = num/num1;
+                        if (num2 <= 0.8){
+                            return(<div><span className="red">{text}</span></div>);
+                        }
+                        else if(num2 >= 0.95){
+                            return(<div><span className="orange">{text}</span></div>)
+                        }
+                        else{
+                            return(<div><span>{text}</span></div>)
+                        };
+                }
             }, 
             {
                 key: 'homeworkSubmit',
                 title: '作业提交率',
                 dataIndex: 'homeworkSubmit',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'dontKnow',
                 title: '被点评情况',
                 dataIndex: 'dontKnow',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'biteCard',
                 title: '打卡率',
                 dataIndex: 'biteCard',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'goodNumber',
                 title: '满意度',
                 dataIndex: 'goodNumber',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+                }
             }
         ],
     dataSource1: [
@@ -152,27 +227,94 @@ const init_List={
                 key: 'studylv',
                 title: '上课率',
                 dataIndex: 'studylv',
+                render:text=>{
+                    let num = parseFloat(text);
+                    let num1 = parseFloat(text.split("/")[1],10)
+                    let num2 = num/num1;
+                    if (num2 <= 0.8){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num2 >= 0.95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'homeworkSubmit',
                 title: '作业提交率',
                 dataIndex: 'homeworkSubmit',
+                render:text=>{
+                    let num = parseFloat(text);
+                    let num1 = parseFloat(text.split("/")[1],10)
+                    let num2 = num/num1;
+                    if (num2 <= 0.8){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num2 >= 0.95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'dontKnow',
                 title: '被点评情况',
                 dataIndex: 'dontKnow',
+                render:text=>{
+                    let num = parseFloat(text);
+                    let num1 = parseFloat(text.split("/")[1],10)
+                    let num2 = num/num1;
+                    if (num2 <= 0.8){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num2 >= 0.95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'biteCard',
                 title: '打卡率',
                 dataIndex: 'biteCard',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+            }
             }, 
             {
                 key: 'goodNumber',
                 title: '满意度',
                 dataIndex: 'goodNumber',
+                render:text=>{
+                    let num = parseFloat(text);
+                    if (num <= 80){
+                        return(<div><span className="red">{text}</span></div>);
+                    }
+                    else if(num >= 95){
+                        return(<div><span className="orange">{text}</span></div>)
+                    }
+                    else{
+                        return(<div><span>{text}</span></div>)
+                    };
+                }
             }
+          
         ]
     }
 export default function tabList(state = init_List,action ){

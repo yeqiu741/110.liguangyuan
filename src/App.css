@@ -1,7 +1,7 @@
 .App {
-  text-align: center;
   width: 1129px;
-  height: 815px;
-  border: 1px solid black;
   margin:0px auto;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }

@@ -1,7 +1,10 @@
 import React,{Component} from 'react';
 import './Header.css';
 import { Avatar } from 'antd';
-
+import { Button } from 'antd';
+import { Input } from 'antd';
+import { Icon } from 'antd'
+const img = require('../img/0.jpg');
 
 export default class Header extends Component{
     constructor(props) {
@@ -27,7 +30,7 @@ export default class Header extends Component{
         
         return(
             <div id="header">
-                <Avatar className="header_bar" shape="square" size="large" icon="user" />
+                <Avatar className="header_bar" shape="square" size="large" icon="user" src={img} />
                 <p className="SI">{this.state.message.class}</p>
                 <div className="header_all">
                     <div className="header_title_box">
@@ -43,9 +46,16 @@ export default class Header extends Component{
                     <div className="header_title_box">
                         <p><span>手机号码：</span>{this.state.message.telphoneNumber}</p>
                         <p><span>微信号码：</span>{this.state.message.weChatId}</p>
-                        <p><span>备注：</span>{this.state.message.word}</p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注：</span>{this.state.message.word}</p>
                     </div>
-                </div>
+                    </div>
+                        <Icon className="headerIcon" type="file-text" />
+                    <div className="button_alll">
+                        <Input size="small" className="button3" placeholder="zhfng" /> 
+                        <Button className="button4" >提交</Button><br />
+                        <Input size="small" className="button3"  />
+                        <Button className="button4">提交</Button>
+                    </div>
             </div>
         )
     }
