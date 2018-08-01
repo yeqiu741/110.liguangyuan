@@ -1,8 +1,14 @@
-import { ADD_MESSAGE } from '../const/ActionTypes.js';
+import * as Actions  from '../const/ActionTypes.js';
 
-export function message(itme){
+export function fetchUserInfo(mid){
     return{
-        type: ADD_MESSAGE,
-        item
+        SERVER_API:{
+            type: Actions.ADD_MESSAGE,
+            url:'',
+            param:{
+                mid
+            }
+        }
     }
 }
+

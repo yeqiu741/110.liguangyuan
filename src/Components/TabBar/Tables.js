@@ -1,18 +1,13 @@
 import React,{Component} from 'react';
 import './Tables.css';
 import {Table} from 'antd';
-import { connect } from 'react-redux'
+import { columns } from './list'
 
 
-
-
-
-
-class Tables extends Component{
+export default class Tables extends Component{
     
     render(){
-        const {dataSource,columns,dataSource1,columns1} = this.props;
-        console.log(dataSource,columns,dataSource1,columns1);
+        const { dataSource ,dataSource1} = this.props;
         return(
             <div>
                 <div className="table1">
@@ -21,19 +16,10 @@ class Tables extends Component{
                 </div>
                 <div className="table2">
                     <p>历史数据</p>
-                    <Table dataSource={dataSource1} columns={columns1} />
+                    <Table dataSource={dataSource1} columns={columns} />
                 </div>
             </div>
         )
     }
 }
 
-
-function mapStateToProps(state,ownProps){
-    const { dataSource,columns,dataSource1,columns1 } = state;
-    console.log({dataSource,columns,dataSource1,columns1});
-    console.log(state);
-    return {dataSource,columns,dataSource1,columns1};
-}
-
-export default connect(mapStateToProps)(Tables);
