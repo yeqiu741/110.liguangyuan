@@ -35,7 +35,7 @@ const columns = [
     key: 'learning_lessons',
     dataIndex: 'learning_lessons',
     render:text=>{
-        if (text===''){
+        if (text==''){
             return(<span>无</span>)
         }
         return text
@@ -47,7 +47,7 @@ const columns = [
     key: 'teachers',
     dataIndex: 'teachers',
     render:text=>{
-        if (text===''){
+        if (text==''){
             return(<span>无</span>)
         }
         return text

@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import NavButton from '../Components/TabBar/NavButton.js';
 import Tables from '../Components/TabBar/Tables.js';
-import './TabBar.css';
 import { Tabs } from 'antd';
 import { connect } from 'react-redux'
 

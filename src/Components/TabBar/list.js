@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from 'antd';
+import './list.css'
 function fun_render(text, type) {
   if (type === 'float') {
     let num = text;
