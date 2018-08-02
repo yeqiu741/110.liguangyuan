@@ -1,14 +1,10 @@
 .Top_Button{
     width: 100%;
+    margin-top: 10px;
 }
 
 .Top_Button1{
     float: left;
-}
-.Top_Button2{
-    float: right;
-    margin-top: -32px;
-    width: 380px;
 }
 .huizong{
     background-color: #fff;
@@ -24,5 +20,7 @@
 
 .serch{
     float: right;
-    margin-top:-32px;
+    width: 26.5%;
+    margin-bottom: 10px;
+    border:1px solid red;
 }

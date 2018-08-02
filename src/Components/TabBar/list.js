@@ -1,6 +1,13 @@
 import React from 'react';
 import { Icon } from 'antd';
 import './list.css'
+import { Popover, Button } from 'antd';
+
+
+
+
+
+
 function fun_render(text, type) {
   if (type === 'float') {
     let num = text;
@@ -51,10 +58,18 @@ export const columns =[{
     dataIndex: 'teacherInfo',
     key: 'teacherInfo',
     render:text =>{
+      const content = (
+        <div>
+          <p><span>老师账号：{text.nick}{"/"}&nbsp;&nbsp;</span><span>ID：{text.id}{"/"}&nbsp;&nbsp;</span><span>微信:{text.wxCode}</span></p>
+          <p><span>对应员工:{text.realName}{"/"}&nbsp;&nbsp;</span><span>ID：{text.mid}{"/"}&nbsp;&nbsp;</span><span>微信:{text.wxCode}</span></p>
+        </div>
+      );
+      
       return(
         <div >
-           <Icon type="user" />
-           <span>{text.nick}</span>
+            <Popover placement="top"  content={content} trigger="click">
+                <Button><Icon type="user" />{text.nick}</Button>
+            </Popover>
         </div>
       )}
   },{

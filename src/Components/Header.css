@@ -15,7 +15,7 @@
 }
 .header_all{
     float: left;
-    width: 950px;
+    width: 80%;
     height: 80px;
     margin-top:40px;
     margin-left: -60px;
@@ -42,28 +42,15 @@ p{
     color:yellowgreen;
 }
 
-.button_alll{
-    width: 180px;
-    height: 40px;
-    float: right;
-    margin-right: 715px;
-    margin-top: -60px;
-}
-
 .button3{
     height: 20px;
-    width: 120px;
-    float: left;
+    width:80px;
+
     text-align: left;
 }
 
 .button4{
-    float: right;
+
     height: 20px;
-    width: 60px;
-}
-.headerIcon{
-    float: right;
-    margin-top: -75px;
-    margin-right: 300px;
+    width: 50px;
 }

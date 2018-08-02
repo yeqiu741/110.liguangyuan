@@ -5,21 +5,22 @@ import { connect } from 'react-redux'
 import * as api from '../api/index'
 import '../middleware/serverApi'
 
+
+
 class Op extends Component{
 
     componentDidMount(){
         const { dispatch } = this.props;
-        console.log("声明周期"+this.props)
         api.fetchlesson(dispatch);
         api.fetchuser(dispatch);
+        api.fetchsta(dispatch);
     }
 
     render(){
-        console.log('啦啦啦，执行到Op.js的render方法了')
         return(
             <div className="App">
                 <Header message = {this.props.headerList.message} />
-                <TabBar /> 
+                <TabBar sta = {this.props.sta} /> 
             </div>
         )
     }
@@ -28,11 +29,15 @@ class Op extends Component{
 function mapStateToProps(state){
     const {
         tableList,
-        headerList
+        headerList,sta
+  
     } = state;
+    console.log({sta})
+    console.log(state)
     const props = {
         tableList,
-        headerList
+        headerList,sta
+
     }
 
     return props;

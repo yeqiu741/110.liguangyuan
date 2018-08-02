@@ -38,7 +38,7 @@ const columns = [
         if (text==''){
             return(<span>无</span>)
         }
-        return text
+        return text.join('  ')
     }
     
   },
@@ -50,7 +50,7 @@ const columns = [
         if (text==''){
             return(<span>无</span>)
         }
-        return text
+        return text.join('  ')
     }
   }
 ];
@@ -61,7 +61,6 @@ export default class Tables extends Component{
     render(){
     
         const {message} = this.props;
-        console.log({message});
         return(
             <div className="tables">
                 <Table columns={columns} dataSource={message} />

@@ -109,6 +109,35 @@ export function fetchcds( next ) {
 });
 }
 
+export function fetchsta( next ) {
+  next({
+    type: ActionTypes.FETCH_STA_REQ
+  });
+  axios({
+    method: 'post',
+    url:`http://xly-wkop.xiaoniangao.cn/getSatisfiledList`,
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    data:{
+      id :2
+    }
+  })
+.then(res =>  {
+  console.log(res);
+  next({
+    type: ActionTypes.FETCH_STA_SUC,
+    data: res.data.data.
+    console.log(res.data.data)
+  });
+  console.log(res.data.data)
+})
+.catch( err => {
+  console.log(err);
+  next({
+    type: ActionTypes.FETCH_STA_FAI,
+  });
+});
+}
+
 
 
 

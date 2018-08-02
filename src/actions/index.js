@@ -1,14 +1,22 @@
-import * as Actions  from '../const/ActionTypes.js';
 
-export function fetchUserInfo(mid){
+
+import * as ActionTypes  from '../const/ActionTypes';
+
+// export function fetchUserInfo(mid){
+//     return{
+//         SERVER_API:{
+//             type: Actions.ADD_MESSAGE,
+//             url:'',
+//             param:{
+//                 mid
+//             }
+//         }
+//     }
+// }
+
+export function fetchSearch(value){
     return{
-        SERVER_API:{
-            type: Actions.ADD_MESSAGE,
-            url:'',
-            param:{
-                mid
-            }
-        }
+        type:ActionTypes.FETCH_SERACH,
+        value
     }
 }
-

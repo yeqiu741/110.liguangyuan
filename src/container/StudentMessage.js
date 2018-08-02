@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import * as api from '../api/index'
 import './StudentMessage.css'
 
+
 class StudentMessage extends Component{
     componentDidMount(){
         const { dispatch } = this.props;
@@ -17,16 +18,16 @@ class StudentMessage extends Component{
         return(
             <div className="studentBox">
                 <TopButton />
-                <Tables message = {this.props.smsg.smsg}  /> 
+                <Tables message = {this.props.smsg.smsg}  />
             </div>
         )
     }
 }
 
 function mapStateToProps(state){
-    const { smsg,tableList,headerList } = state;
-    const props = {smsg, tableList,headerList}
-    console.log(props)
+    const { smsg,tableList,headerList,sta } = state;
+    console.log(state)
+    const props = {smsg, tableList,headerList,sta}
     return props;
 }
 export default connect(mapStateToProps)(StudentMessage)

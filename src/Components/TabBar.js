@@ -3,6 +3,7 @@ import NavButton from '../Components/TabBar/NavButton.js';
 import Tables from '../Components/TabBar/Tables.js';
 import { Tabs } from 'antd';
 import { connect } from 'react-redux'
+import Satifyaa from './TabBar/Satifyaa.js';
 
 
 
@@ -20,14 +21,17 @@ class TabBar extends Component{
                     <NavButton />
                     <Tables dataSource={this.props.LessonsList} dataSource1={this.props.historyLessonsList} /> 
                 </TabPane>
-                <TabPane className="bar" tab="满意度反馈" key="2"></TabPane>
+
+                <TabPane className="bar" tab="满意度反馈" key="2">
+                    <Satifyaa sta={this.props.sta} />
+                </TabPane>
             </Tabs>
         )
     }
 }
-function mapStateToProps(state){
+ function mapStateToProps(state){
     const {LessonsList,historyLessonsList}= state.tableList;
-    console.log(state.tablelist)
-    return {LessonsList,historyLessonsList}
+    const{sta} = state.sta;
+    return {LessonsList,historyLessonsList,sta}
 }
 export default connect(mapStateToProps)(TabBar)

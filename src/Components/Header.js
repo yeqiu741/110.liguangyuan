@@ -26,18 +26,13 @@ export default class Header extends Component{
                         <p><span>最后登登录时间：</span>{message.lastLoginDate}</p>
                     </div>
                     <div className="header_title_box">
-                        <p><span>手机号码：</span>{message.tel}</p>
-                        <p><span>微信号码：</span>{message.weiChatCode}</p>
-                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注：</span>{message.remark}</p>
+                        <p><span>手机号码：</span>{message.tel}&nbsp;&nbsp;&nbsp;&nbsp;<Icon className="headerIcon" type="file-text" /></p>
+                        <p><span>微信号码：</span><Input size="small" className="button3" placeholder={message.weiChatCode} /> 
+                        <Button className="button4" >提交</Button><br /></p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注：</span>{message.remark} <Input size="small" className="button3" placeholder={message.remark} />
+                        <Button className="button4">提交</Button></p>
                     </div>
-                    </div>
-                        <Icon className="headerIcon" type="file-text" />
-                    <div className="button_alll">
-                        <Input size="small" className="button3" placeholder={message.weiChatCode} /> 
-                        <Button className="button4" >提交</Button><br />
-                        <Input size="small" className="button3" placeholder={message.remark} />
-                        <Button className="button4">提交</Button>
-                    </div>
+                </div>      
             </div>
         )
     }
