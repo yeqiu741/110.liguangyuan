@@ -8,9 +8,9 @@ import StudentMessage from '../container/StudentMessage'
 const Routes = ()=>{
     return(
         <Router  history={browserHistory}>
-            <Route path="/" component={Op} ><IndexRoute component={Op} /></Route>
+            <Route path="Op/:mid" component={Op} ><IndexRoute component={StudentMessage} /></Route>
             <Route path="classdetails" component={ClassDetails} />
-            <Route path="studentmessage" component={StudentMessage} />
+            <Route path="/" component={StudentMessage} />
 
         </Router>
     )

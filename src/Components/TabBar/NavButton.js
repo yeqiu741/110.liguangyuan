@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './NavButton.css';
 import { Button } from 'antd';
+import {Link} from 'react-router'
 
 
 export default class NavButton extends Component{
@@ -15,7 +16,7 @@ export default class NavButton extends Component{
                     <Button className='huiHuaKe' type="Default">绘画课</Button>
                 </div>
                 <div className="button2">
-                    <Button type="Default">返回</Button>
+                <Link to='/' > <Button type="Default" >返回</Button></Link>
                 </div>
             </div>
         )

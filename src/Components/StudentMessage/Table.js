@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import './Table.css'
 import { Table} from 'antd'
+import { Link  } from 'react-router'
 
 const columns = [
     {
@@ -21,6 +22,9 @@ const columns = [
     title: '学员编号/MID',
     dataIndex: 'mid',
     key: 'mid',
+    render:text=>{
+    return(<Link to={`/Op/${text}`}>{text}</Link>)
+    }
   }, {
     title: '入学时间',
     dataIndex: 'enter_time',

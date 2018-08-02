@@ -13,10 +13,10 @@ export default class Header extends Component{
         return(
             <div id="header">
                 <Avatar className="header_bar" shape="square" size="large" icon="user" src={message.hurl} />
-                <p className="SI">三班人</p>
+                <p className="SI">{message.nick}</p>
                 <div className="header_all">
                     <div className="header_title_box">
-                        <p><span >学员编号：</span>{message.nick}</p>
+                        <p><span >学员编号：</span>{message.mid}</p>
                         <p><span>在学课程：</span>{message.learningLesson}</p>
                         <p><span>入学时间：</span>{message.lastLoginDate}</p>
                     </div>

@@ -1,7 +1,5 @@
 import React,{Component} from 'react'
 import {Table} from 'antd';
-import { connect } from 'react-redux'
-import * as api from '../../api/index'
 
 export default class Satifyaa extends Component{
 
