@@ -14,5 +14,23 @@ const satisfiled = new schema.Entity('satisfiled',{
 },{
   idAttribute:'time'
 })
+export const SATISFILEDLIST = [ satisfiled ];  
 
-export const SATISFILEDLIST = [ satisfiled ];
+
+
+
+//学生课程信息
+const classInfo = new schema.Entity('classInfo', {}, {
+  idAttribute: 'id'
+});
+const teacherInfo = new schema.Entity('teacherInfo',{},{
+  idAttribute:'mid'
+})
+
+const lessonInfo = new schema.Entity('lessonInfo',{
+  class_info:classInfo,
+  teacher_info:teacherInfo
+},{
+  idAttribute:'startTime'
+})
+export const LESSONINFO = [lessonInfo];

@@ -11,6 +11,7 @@ export default {
         params: {
           mid: params.mid
         },
+        // normailzerFun:response=> normalize(response.data.list, schemes.LESSONINFO)
       },
       mid: params.mid
     }
