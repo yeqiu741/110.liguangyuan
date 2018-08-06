@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
-//import StudentMessage from './container/StudentMessage'
-//  import Op from './container/Op'
-// import ClassDetails from './container/ClassDetails'
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './reducers'
 import { Provider } from 'react-redux'
-import './App.css'
-import { createLogger } from 'redux-logger'
-import Routers from './routers/index'
-import serverApi from './middleware/serverApi'
+import './App.css';
+import configureStore from './store/configureStore'
 
+import { Router, browserHistory } from 'react-router'
+import routes from './routes'
 
-
-
-const logger = createLogger();
-
-const store = createStore(
-  rootReducer,
-    applyMiddleware(serverApi,logger),
-)
-
+const store = configureStore()
 class App extends Component {
   render() {
     return (
-    <Provider store={store}>
-      {/*<StudentMessage /> */}
-      {/* <ClassDetails /> */}
-      {/* <Op />  */}
-      <Routers />
-    </Provider>
-    )
+      <Provider store={store}>
+        <Router routes={routes} history={browserHistory} />
+      </Provider>
+    );
   }
 }
 

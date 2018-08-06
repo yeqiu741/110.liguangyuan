@@ -1,14 +1,19 @@
-import headerList from './headerList'
-import tableList from './tableList'
-import smsg from './smsg'
-import Cdetails from '../reducers/Cdetails'
-import { combineReducers } from 'redux';
-import sta from './sta'
+import { combineReducers } from 'redux'
+import lessonInfo from './lessonInfo'
+import userInfo from './userInfo'
+import ui from './ui'
+import studentLib from './studentLib'
+import classesDetail from './classesDetail'
+import satisfied from './satisfied'
+import entities from './entities'
 
-export default combineReducers({
-    tableList,
-    headerList,
-    smsg,
-    Cdetails,
-    sta
+const rootReducer = combineReducers({
+  entities,
+  lessonInfo,
+  userInfo,
+  studentLib,
+  classesDetail,
+  satisfied,
+  ui
 })
+export default rootReducer

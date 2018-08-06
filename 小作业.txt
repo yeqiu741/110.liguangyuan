@@ -1,8 +1,0 @@
-store :是用来维持应用所有的state树的一个对象。改变store内state的惟一途径是对它dispatch一个action，所以store里面有state状态数据
-state：是一个对象，存储应用的状态数据
-action:描述应用变化的普通对象。action是把数据传入store的惟一途径。
-disptch：分发action。这是触发state变化的惟一途径
-mapstatetoprops：负责将通过state获得的数据映射到展示组件的this.props
-mapDispatchToProps:负责将用户操作转化为Action的功能函数映射到展示组件的this.props
-connect：监听store是否发生变化，如果发生变化则调用setState更新组件，此时组建的props也就跟着变化
-provider:provider是给connect连接提供store用的

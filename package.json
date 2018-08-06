@@ -1,10 +1,12 @@
 {
-  "name": "xng03",
+  "name": "new",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.5.2",
     "antd": "^3.7.3",
     "axios": "^0.18.0",
+    "normalizr": "^3.2.4",
     "react": "^16.0.0",
     "react-dom": "^16.4.1",
     "react-redux": "^4.4.9",
