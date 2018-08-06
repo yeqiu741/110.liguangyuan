@@ -53,8 +53,32 @@ function satisfiled (state = {},action){
   }
 }
 
+function lessonInfo (state = {},action){
+  switch(action.type){
+    case `${ActionTypes.FETCH_LESSON_INFO}_SUC`: {
+      const {current,history} =  action.response
+      console.log(action.response)
+      return {
+        ...state,
+        ...current.entities.lessonInfo,
+        ...history.entities.lessonInfo
+      };
+    }
+    case `${ActionTypes.REPLY_USER_FEED_BACK}`: {
+      const { startTime } = action.params
+      const targetItem = { ...state[startTime] }
+      targetItem.reply_status = 1
+      const nextState = { ...state, [startTime]: targetItem }
+      return nextState
+    }
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   classes,
   teachers,
-  satisfiled
+  satisfiled,
+  lessonInfo
 });

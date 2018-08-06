@@ -20,17 +20,10 @@ export const SATISFILEDLIST = [ satisfiled ];
 
 
 //学生课程信息
-const classInfo = new schema.Entity('classInfo', {}, {
-  idAttribute: 'id'
-});
-const teacherInfo = new schema.Entity('teacherInfo',{},{
-  idAttribute:'mid'
-})
-
 const lessonInfo = new schema.Entity('lessonInfo',{
-  class_info:classInfo,
-  teacher_info:teacherInfo
+  classInfo:classes,
+  teacherInfo:teacher
 },{
-  idAttribute:'startTime'
+  idAttribute:'mid'
 })
 export const LESSONINFO = [lessonInfo];

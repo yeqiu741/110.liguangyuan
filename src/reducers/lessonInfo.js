@@ -4,8 +4,8 @@ import ActionTypes from '../const/ActionTypes'
 function currentLessonsList(state = {}, action) {
   switch(action.type){
     case `${ActionTypes.FETCH_LESSON_INFO}_SUC`:
-      return { ...state, [action.mid]: [ ...action.response.data.currentLessonsList ] }
-      
+    const {current} = action.response;
+      return { ...state, [action.mid]: current.result }
     default:
       return state
   }
@@ -13,7 +13,8 @@ function currentLessonsList(state = {}, action) {
 function historyLessonsList(state = {}, action) {
   switch(action.type){
     case `${ActionTypes.FETCH_LESSON_INFO}_SUC`:
-      return { ...state, [action.mid]: [ ...action.response.data.historyLessonsList ] }
+    const {history} = action.response;
+      return { ...state, [action.mid]: history.result  }
     default:
       return state
   }
