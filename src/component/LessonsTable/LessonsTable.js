@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import { Table,Button } from 'antd'
-import { browserHistory } from 'react-router';
+import { Table } from 'antd'
 import './LessonsTable.css'
 
 class LessonsTable extends Component { 
-  handleReturn = () => {
-    browserHistory.go(-1)
-  }
   renderState = (state) => {
     switch(state){
       case -1:
@@ -67,7 +63,6 @@ class LessonsTable extends Component {
     }];
     return (
       <div className="table-wrapper-noBorder">
-        <Button  onClick={this.handleReturn}>返回</Button>
         <Table 
           rowKey={record => record.course_name} 
           dataSource={list} 

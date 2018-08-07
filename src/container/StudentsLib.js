@@ -4,14 +4,17 @@ import { bindActionCreators } from 'redux'
 import userActions from '../actions/user'
 import StudentTable from '../component/StudentTable/StudentTable'
 import StudentSearcher from '../component/StudentSearcher/StudentSearcher'
+import { Link } from 'react-router'
+import '../App.css'
 
 class StudentsLib extends Component {
   componentDidMount() {
     const { userActions } = this.props
     userActions.fetchStudentList()
   }
+
   render () {
-    const { studentList, userActions } = this.props
+    const { studentList, userActions, entities } = this.props
     const options = [
       {
         value: 'mid',
@@ -25,7 +28,8 @@ class StudentsLib extends Component {
     return (
       <div>
         <StudentSearcher options={options} onSearch={userActions.searchStudentListByOption} />
-        <StudentTable list={studentList} />
+        <StudentTable entities={entities} list={studentList} />
+        <Link to='/'><button className="fanhui">返回</button></Link>
       </div>
     )
   }
@@ -46,9 +50,11 @@ const mapStateToProps = state => {
     studentLib: { 
       list: studentList,
       filterOption
-    }
+    },
+    entities
   } = state
   return {
+    entities,
     studentList: getAfterFilterList(studentList, filterOption)
   }
 }

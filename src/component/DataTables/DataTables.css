@@ -1,5 +1,5 @@
 .table-group {
-  width: 100%;
+  padding: 20px;
 }
 
 .table-item {
@@ -16,20 +16,12 @@
   font-weight: bold
 }
 .bad-rate {
+  color: red;
   font-weight: bold
+}
+.common-rate {
+
 }
 .marginRight20 {
   margin-right: 20px;
-}
-
-
-.ant-table-tbody > tr > td{
-  text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
-}
-
-.ant-table-thead > tr > th{
-  text-align: center;
-  border:1px gray solid;
-  background-color: rgba(0, 0, 0, .3);
 }

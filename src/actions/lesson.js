@@ -11,12 +11,12 @@ export default {
         params: {
           mid: params.mid
         },
-        normailzerFun:response=> {
-          const current = normalize(response.data.currentLessonsList, schemes.LESSONINFO);
-          const hisotry = normalize(response.data.historyLessonsList, schemes.LESSONINFO);
+        normailzerFun:response => {
+          const history = normalize(response.data.historyLessonsList, schemes.LESSONS);
+          const current = normalize(response.data.currentLessonsList, schemes.LESSONS);
           return {
-            current,
-            hisotry
+            history,
+            current
           }
         }
       },

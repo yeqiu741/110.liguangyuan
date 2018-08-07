@@ -25,7 +25,7 @@ class UserCenter extends Component {
       lessonActions,
       entities
     } = this.props
-
+    // const mid = this.props.params.mid
     return (
       <div>
         <UserInfoBox userInfo={userInfo} />

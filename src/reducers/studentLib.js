@@ -4,9 +4,8 @@ import ActionTypes from '../const/ActionTypes'
 function list(state = [], action) {
   switch (action.type) {
     case `${ActionTypes.FETCH_STUDENT_LIST}_SUC`:
-      return [ 
-        ...action.response.data
-      ]
+      const result = action.response.result;
+      return result;
     default:
       return state
   }
@@ -23,6 +22,5 @@ function filterOption(state = null, action) {
 const studentLib = combineReducers({
   list,
   filterOption
-
 })
 export default studentLib

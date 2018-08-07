@@ -1,0 +1,29 @@
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 260px;
+    line-height: 260px;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: blueviolet;
+  }
+
+  .notreview{
+      width: 100%;
+      border:1px solid gray;
+  }
+
+  .notreview_left{
+    float: left;
+      width: 70%;
+      border-right:2px solid gray;
+  }
+  .notreview img{
+    margin:10px auto;
+  }
+
+  .notreview_right{
+    float: right;
+    width: 30%;
+  }

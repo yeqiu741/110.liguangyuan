@@ -1,0 +1,10 @@
+.serach{
+    width: 100%;
+    border:1px solid gray ;
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+.title p{
+    background-color: rgba(0, 0, 0, .3);
+    line-height:30px; 
+}

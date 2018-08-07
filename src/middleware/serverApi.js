@@ -20,10 +20,12 @@ const callServerApi = (apiParams) => {
     .then(res => {
       if (res.data.ret === 1) {
         resolve(res)
+        console.log(res.data)
       } else {
         reject(res.data.errMsg)
       }
     })
+   
     .catch(res => {
       reject(JSON.stringify(res))
     })
@@ -56,9 +58,8 @@ const serverApi = () => next => action => {
   }));
   callServerApi({ endpoint, params })
     .then(res => {
-
       const response = typeof (normailzerFun) !== 'undefined' ? normailzerFun(res.data) : res.data;
-      
+
       next(actionWith({
         type: `${type}_SUC`,
         __api:{endpoint,params},

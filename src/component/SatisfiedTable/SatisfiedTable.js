@@ -58,14 +58,6 @@ class SatisfiedTable extends Component {
       title: '满意度评分',
       dataIndex: 'satisfied_score',
       align: 'center',
-      render:text=>{
-        if(text<5){
-          return (
-            <span className="red">{text}</span>
-          )
-        }
-        return <span>{text}</span>
-      }
     }, {
       title: '具体反馈',
       dataIndex: 'satisfied_detail',
@@ -83,8 +75,7 @@ class SatisfiedTable extends Component {
   rowKey = (record,i) => `${record.class_info && record.class_info.id}_${i}`
 
   render() {
-    const { list, entities } = this.props;
-    console.log(this.props)
+    const { list, entities } = this.props
     let newList = list;
     if(list){
       newList = list.map(t=>{

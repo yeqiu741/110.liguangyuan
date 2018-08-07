@@ -32,7 +32,7 @@ class StudentSearcher extends Component {
     const { options } = this.props
     return (
       <div className="searcher-wrapper">
-        <InputGroup className="Inputgroup" compact>
+        <InputGroup compact>
           <Select defaultValue={this.state.currentOptionValue} onChange={this.handleChange}>
             { options.map(item => <Option key={item.value} value={item.value}>{item.text}</Option>) }
           </Select>
@@ -41,6 +41,12 @@ class StudentSearcher extends Component {
             enterButton
             onSearch={this.onSearch}
           />
+          {/*<Input style={{ width: '30%' }} defaultValue="input content" />*/}
+          {/*<Search
+            placeholder="input search text"
+            onSearch={value => console.log(value)}
+            style={{ width: 200 }}
+          />*/}
         </InputGroup>
       </div>
     )

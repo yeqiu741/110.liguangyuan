@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Tabs } from 'antd'
 import './OpTabs.css'
-import ButtonGroup from '../ButtonGroup/ButtonGroup'
-import DataTables from '../DataTables/DataTables'
+import ButtonGroup from '../../component/ButtonGroup/ButtonGroup'
+import DataTables from '../../component/DataTables/DataTables'
 import SatisfiedTable from '../SatisfiedTable/SatisfiedTable'
 
 const TabPane = Tabs.TabPane;
@@ -21,10 +21,10 @@ class OpTabs extends Component {
       entities
     } = this.props
     return (
-      <Tabs className="tabs" defaultActiveKey="1" >
+      <Tabs tabBarStyle={{padding: '0 20px'}} defaultActiveKey="1" onChange={null}>
         <TabPane className="tab-pane" tab="课程信息" key='1'>
           <ButtonGroup customButtons={learningLesson}/>
-          <DataTables lessonInfo={{currentLessonsList, historyLessonsList}} />
+          <DataTables entities={entities} lessonInfo={{currentLessonsList, historyLessonsList}} />
         </TabPane>
         <TabPane className="tab-pane" tab="满意度反馈" key='2'>
           <ButtonGroup customButtons={learningLesson}/>
