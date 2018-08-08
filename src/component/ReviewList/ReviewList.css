@@ -1,6 +1,8 @@
 .reviewList{
     width: 100%;
     border:1px solid gray;
+    overflow: scroll;
+    height: 630px;
 }
 
 .cirle{

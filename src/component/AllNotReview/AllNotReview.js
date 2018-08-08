@@ -1,12 +1,11 @@
 import React,{Component} from 'react'
-import './NotReview.css'
 import NotReviewList from '../NotReviewList/NotReviewList';
 
 
 
 export default class NotReview extends Component{
 
-    renderNotReviewList = (data) =>{
+    renderAllNotReviewList = (data) =>{
        const rnrl = (data||[]).map((item ,idx)=>{
            return <NotReviewList key={idx} item={item} />
        });
@@ -15,11 +14,13 @@ export default class NotReview extends Component{
     
  
     render(){
-        const {notReviewList} = this.props;
-        const data = notReviewList.data;
+        const {allNotReviewList} = this.props;
+        console.log(this.props)
+        console.log(allNotReviewList)
+        const data = allNotReviewList.data;
         return(
             <ul >
-                {this.renderNotReviewList(data)}
+                {this.renderAllNotReviewList(data)}
             </ul>
         )
         

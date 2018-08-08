@@ -99,10 +99,66 @@ function students(state = {}, action){
   }
 }
 
+// function notReviewList(state = {}, action) {
+//   switch(action.type){
+//       case `${ActionTypes.FETCH_NOTREVIEW_LIST}_SUC`:
+//       const {entities} = action.response;
+//       return {
+//         ...state,
+//         ...entities.notReviewList
+//       }
+//       default:
+//           return state
+//   }
+// }
+// function doneReviewList(state = {}, action) {
+//   switch(action.type){
+//       case `${ActionTypes.FETCH_DONEREVIEW_LIST}_SUC`:
+//       const {entities} = action.response;
+//       return {
+//         ...state,
+//         ...entities.doneReviewList
+//       }
+//       default:
+//       return state
+//   }
+// }
+// function allNotReviewList(state = {}, action) {
+//   switch(action.type){
+//       case `${ActionTypes.FETCH_ALLNOTREVIEW_LIST}_SUC`:
+//       const {entities} = action.response;
+//       return {
+//         ...state,
+//         ...entities.allNotReviewList
+//       }
+//       default:
+//           return state
+//   }
+// }
+
+// function allDoneReviewList(state = {}, action) {
+//   switch(action.type){
+//       case `${ActionTypes.FETCH_ALLDONEREVIEW_LIST}_SUC`:
+//       const {entities} = action.response;
+//       return {
+//         ...state,
+//         ...entities.allDoneReviewList
+//       } 
+//       default:
+//           return state
+//   }
+// }
+
+
+
 export default combineReducers({
   classes,
   teachers,
   satisfiled,
   students,
-  lessons
+  lessons,
+  // notReviewList,
+  // doneReviewList,
+  // allNotReviewList,
+  // allDoneReviewList
 });

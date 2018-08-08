@@ -10,26 +10,37 @@ import '../App.css'
 
 
 class ReviewHomework extends Component{
-    componentDidMoun(){
+    componentDidMount(){
         const { reviewActions } = this.props;
         const isReviewed0 = 0;
         const isReviewed1 = 1;
         const token0 = 0;
         const token1 = 1;
         console.log("生命周期执行了===========================");
-        reviewActions.fetchNotReviewList(isReviewed0);
-        reviewActions.fetchDoneReviewList(isReviewed1);
-        reviewActions.fetchAllNotReviewList(token0);
-        reviewActions.fetchAllDoneReviewList(token1);
-
+        reviewActions.fetchNotReviewList(token1,isReviewed0);
+        reviewActions.fetchDoneReviewList(token1,isReviewed1);
+        reviewActions.fetchAllNotReviewList(token0,isReviewed0);
+        reviewActions.fetchAllDoneReviewList(token0,isReviewed1);
     }
 
     render(){
-
+        const {notReviewList,
+            doneReviewList,
+            allNotReviewList,
+            allDoneReviewList} = this.props;
+            console.log({notReviewList,
+                doneReviewList,
+                allNotReviewList,
+                allDoneReviewList})
         return(
-            <div>
+            <div className="ReviewHomework">
                 <NavTop />
-                <ReviewList />
+                <ReviewList 
+                    notReviewList={notReviewList}
+                    doneReviewList={doneReviewList}
+                    allNotReviewList={allNotReviewList}
+                    allDoneReviewList={allDoneReviewList}
+                />
                 <Link to='studentsLib'><Button className="fanhui">跳转到学生列表</Button></Link>
             </div>
         )
@@ -37,12 +48,24 @@ class ReviewHomework extends Component{
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const {
-    notReview
+   const { review:{
+            notReviewList,
+            doneReviewList,
+            allNotReviewList,
+            allDoneReviewList
+        } 
     } = state;
-    console.log(state)
-    return {notReview}
     
+    console.log({
+        notReviewList,
+        doneReviewList,
+        allNotReviewList,
+        allDoneReviewList
+    } )
+   return {notReviewList,
+    doneReviewList,
+    allNotReviewList,
+    allDoneReviewList}
 }
 
 const mapDispatchToProps = dispatch =>{

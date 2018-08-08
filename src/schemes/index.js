@@ -27,11 +27,24 @@ const lesson = new schema.Entity('lessons',{
 })
 
 
-const notReviewList = new schema.Entity('notReviewList',{},{
-  idAttribute:'id'
-})
+// const notReviewList = new schema.Entity('notReviewList',{},{
+//   idAttribute:'id'
+// })
 
-export const NOTREVIEWLIST = [notReviewList]
+// const doneReviewList = new schema.Entity('doneReviewList',{},{
+//   idAttribute:'id'
+// })
+// const allNotReviewList = new schema.Entity('allNotReviewList',{},{
+//   idAttribute:'id'
+// })
+// const allDoneReviewList = new schema.Entity('allDoneReviewList',{},{
+//   idAttribute:'id'
+// })
+
+// export const NOTREVIEWLIST = [ notReviewList ];
+// export const DONEREVIEWLIST = [ doneReviewList ];
+// export const ALLNOTREVIEWLIST = [ allNotReviewList ];
+// export const ALLDONEREVIEWLIST = [ allDoneReviewList ];
 export const LESSONS = [ lesson ];
 export const STUDENTLIST = [student];
 export const SATISFILEDLIST = [ satisfiled ];

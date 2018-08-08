@@ -2,6 +2,9 @@ import React,{Component} from 'react'
 import './ReviewList.css'
 import { Tabs } from 'antd';
 import NotReview from '../NotReview/NotReview';
+import DoneReview from '../DoneReview/DonReview'
+import AllNotReview from '../AllNotReview/AllNotReview'
+import AllDoneReview from '../AllDoneReview/AllDoneReview'
 
 const TabPane = Tabs.TabPane;
 
@@ -9,7 +12,12 @@ const TabPane = Tabs.TabPane;
 export default class ReviewList extends Component{
     
     render(){
-            
+        const {notReviewList,
+            doneReviewList,
+            allNotReviewList,
+            allDoneReviewList
+        } = this.props;
+           
             const tab1 = (text1,text2)=>{
                 return(
                     <div>我的未点评:{text1}{" "}今日已点评：{text2}</div>
@@ -34,16 +42,16 @@ export default class ReviewList extends Component{
             <div className="reviewList">
                 <Tabs  type="card">
                     <TabPane tab={tab1()} key="1">
-                        <NotReview />
+                        <NotReview notReviewList={notReviewList}  />
                     </TabPane>
                     <TabPane tab={tab2()} key="2">
-                        <NotReview />
+                        <DoneReview doneReviewList={doneReviewList}  />
                     </TabPane>
                     <TabPane tab={tab3()} key="3">
-                        <NotReview />
+                        <AllNotReview allNotReviewList={allNotReviewList}  />
                     </TabPane>
                     <TabPane tab={tab4()} key="4">
-                        <NotReview />
+                        <AllDoneReview allDoneReviewList={allDoneReviewList}  />
                     </TabPane>
                 </Tabs>
             </div>

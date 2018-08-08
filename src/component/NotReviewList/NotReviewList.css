@@ -5,3 +5,68 @@ ul{
     margin:0;
     padding: 0;
 }
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 260px;
+    line-height: 260px;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: blueviolet;
+  }
+
+  .notreview{
+      width: 100%;
+      border:1px solid gray;
+  }
+
+  .notreview_left{
+      float: left;
+      width: 70%;
+      border-right:2px solid gray;
+  }
+  .notreview img{
+    margin:10px auto;
+  }
+
+  .notreview_right{
+    float: right;
+    width: 30%;
+
+    border-bottom: 1px solid gray;
+  }
+  .message{
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: space-around;
+    flex-shrink: 1;
+    border-top:1px solid gray;
+    height: 60px;
+
+}
+.message div{
+    width: 20%;
+}
+.message_middle{
+    flex-grow: 2;
+}
+.message_left span{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.message_right span{
+    line-height: 60px;
+}
+.avatar{
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+.imgBox{
+    background-color: rgba(0, 0, 0, .3);
+    height: 300px;
+}

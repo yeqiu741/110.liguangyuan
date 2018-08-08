@@ -3,28 +3,30 @@ import ActionTypes from '../const/ActionTypes'
 
 function notReviewList(state = {}, action) {
     switch(action.type){
-        case `${ActionTypes.FETCH_REVIEW_LIST}_SUC`:
-            const nrl = action.data
-            return Object.assign({},state,{nrl})
+        case `${ActionTypes.FETCH_NOTREVIEW_LIST}_SUC`:
+        const result = action.response;
+        return result 
+        /*
+        case `${A}`
+        */
         default:
             return state
-
     }
   }
 function doneReviewList(state = {}, action) {
     switch(action.type){
-        case `${ActionTypes.FETCH_REVIEW_LIST}_SUC`:
-            const drl = action.data
-            return Object.assign({},state,{drl})
+        case `${ActionTypes.FETCH_DONEREVIEW_LIST}_SUC`:
+        const result = action.response;
+        return result 
         default:
         return state
     }
   }
 function allNotReviewList(state = {}, action) {
     switch(action.type){
-        case `${ActionTypes.FETCH_REVIEW_LIST}_SUC`:
-            const anrl = action.data
-            return Object.assign({},state,{anrl})
+        case `${ActionTypes.FETCH_ALLNOTREVIEW_LIST}_SUC`:
+        const result = action.response;
+        return result 
         default:
             return state
     }
@@ -32,9 +34,9 @@ function allNotReviewList(state = {}, action) {
 
 function allDoneReviewList(state = {}, action) {
     switch(action.type){
-        case `${ActionTypes.FETCH_REVIEW_LIST}_SUC`:
-            const adrl = action.data
-            return Object.assign({},state,{adrl})
+        case `${ActionTypes.FETCH_ALLDONEREVIEW_LIST}_SUC`:
+        const result = action.response;
+        return result 
         default:
             return state
     }
