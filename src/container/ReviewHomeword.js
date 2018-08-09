@@ -72,7 +72,6 @@ const mapDispatchToProps = dispatch =>{
     return{
         reviewActions:bindActionCreators(reviewActions, dispatch),
     }
-
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(ReviewHomework)

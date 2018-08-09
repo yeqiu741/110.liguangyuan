@@ -1,9 +1,9 @@
 import ActionTypes from '../const/ActionTypes'
 
-export function addItem(item){
+export default function returnReason(id){
     return{
       type:ActionTypes.FETCH_RETURN_RESULT,
-      item
+      id
     }
   }
   

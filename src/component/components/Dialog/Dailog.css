@@ -1,0 +1,43 @@
+.ios_first{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.dailog{
+    opacity: 0;
+}
+.ios_first_content{
+    width: 20%;
+    position: relative;
+    background-color: #fff;
+    margin:20% auto;
+    border-radius: 10px;
+}
+.ios_first_content_p{
+    width: 100%;
+}
+
+.p_title{
+    font-size: 20px;
+    text-align: center;
+}
+.p_content{
+    font-size: 15px;
+    text-align: center;
+}
+
+.ios_first_content_button{
+    width: 100%;
+}
+.button_1{
+    width: 50%;
+
+}
+.button_2{
+    width: 50%;
+
+}
