@@ -40,23 +40,24 @@ export default class DailogAll extends Component{
             content:'我也不知道要填什么内容4'
         });
     }
-    // onCancle=()=>{
-    //     this.setState({
-    //         dailog:false
-    //     })
-    // }
+    handleHideActionSheet=()=>{
+        this.setState({
+            dailog:false
+        })
+    }
     render(){
 
         return(
             <div>
-                <p onClick={this.handleOnClickFirst}>iOS Dailog样式一</p>
-                <p onClick={this.handleOnClickFirst1}>iOS Dailog样式二</p>
-                <p onClick={this.handleOnClickFirst2}>Android Dailog样式一</p>
-                <p onClick={this.handleOnClickFirst3}>Android Dailog样式二</p>
+                <button onClick={this.handleOnClickFirst}>iOS Dailog样式一</button>
+                <button onClick={this.handleOnClickFirst1}>iOS Dailog样式二</button>
+                <button onClick={this.handleOnClickFirst2}>Android Dailog样式一</button>
+                <button onClick={this.handleOnClickFirst3}>Android Dailog样式二</button>
                 <Dailog
                     title={this.state.title}
                     content={this.state.content}
                     dailog={this.state.dailog}
+                    onCancel={this.handleHideActionSheet}
                 />
             </div>
         )

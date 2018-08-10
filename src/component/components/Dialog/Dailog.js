@@ -17,11 +17,19 @@ export default class Dailog extends Component{
         }
         return 'ios_first'
     }
+    dailogButton=()=>{
+        this.setState({
+            dailog:true,
+            title:'',
+            content:'',
+            onCancel: () => {}
+        })
+    }
     render(){
         const {title,content} =this.props;
         return(
             
-                    <div className={this.dailog}>
+                    <div className={this.dailog()} onClick={this.props.onCancel}>
                         <div className="ios_first_content">
                             <div className="ios_first_content_p">
                                 <p className="p_title">{title}</p>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Button } from 'antd'
 import './ButtonGroup.css'
-import { browserHistory } from 'react-router';
+// import { browserHistory } from 'react-router';
 
 class ButtonGroup extends Component {
   handleReturn = () => {
-    browserHistory.goBack()
+    // browserHistory.goBack()
+    window.history.go(-1)
   }
   render() {
     const { customButtons } = this.props
