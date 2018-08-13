@@ -1,41 +1,16 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.jurisdiction{
+    width: 90%;
+    margin: 0 auto;
+    border:1px solid gray;
+    height: 760px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.fanhui{
-  margin-left: 100px;
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
-  background-color: #222;
-  color: white;
-}
-
-.ReviewHomework{
-  padding: 15px;
+.title{
+    width: 96%;
+    margin: 10px auto ;
+    font-size: 15px;
+    font-weight: bold;
 }

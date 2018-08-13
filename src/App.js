@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import './App.css';
-import configureStore from './store/configureStore'
+import confingureStore from './store/configureStore';
+import Jurisdiction from './container/Jurisdiction'
 
-import { Router, browserHistory } from 'react-router'
-import routes from './routes'
+const store = confingureStore()
 
-const store = configureStore()
-class App extends Component {
-  render() {
-    return (
+class App extends Component{
+  render(){
+
+    return(
       <Provider store={store}>
-        <Router routes={routes} history={browserHistory} />
+        <Jurisdiction />
       </Provider>
-    );
+    )
   }
 }
 

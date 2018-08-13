@@ -1,0 +1,25 @@
+.lableButton{
+    width: 96%;
+    height: 40PX;
+    border: 1px solid rgba(0, 0, 0, .3);
+    margin:10px auto;
+    border:1px solid black ;
+}
+.divTitle{
+    width: 60%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.buttonButton {
+    margin-top:-33px;
+    margin-left: 77%;
+    margin-bottom: 20px;
+    width: 20%;
+    text-align: center;
+    height: 70%;
+    border:1px solid rgba(0, 0, 0, .3);
+    background-color: #fff;
+    margin-right: 20px;
+}

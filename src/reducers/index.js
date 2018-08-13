@@ -1,21 +1,11 @@
 import { combineReducers } from 'redux'
-import lessonInfo from './lessonInfo'
-import userInfo from './userInfo'
-import ui from './ui'
-import studentLib from './studentLib'
-import classesDetail from './classesDetail'
-import satisfied from './satisfied'
-import entities from './entities'
-import review from './review'
+import feature from './feature'
+import departmentMessage from './departmentMessage'
+import hadDepartment from './hadDepartment'
 
 const rootReducer = combineReducers({
-  entities,
-  lessonInfo,
-  userInfo,
-  studentLib,
-  classesDetail,
-  satisfied,
-  ui,
-  review
+    feature,
+    departmentMessage,
+    hadDepartment
 })
 export default rootReducer
