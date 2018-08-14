@@ -1,11 +1,7 @@
-import { combineReducers } from 'redux'
-import feature from './feature'
-import departmentMessage from './departmentMessage'
-import hadDepartment from './hadDepartment'
-
-const rootReducer = combineReducers({
-    feature,
-    departmentMessage,
-    hadDepartment
+import {combineReducers} from 'redux'
+import entities from './entities.js'
+import  departmentInfo from './departmentInfo'
+export default combineReducers({
+  entities,
+  departmentInfo
 })
-export default rootReducer

@@ -15,20 +15,23 @@ export default class LableButton extends Component{
         })
     }
     render(){
-        const {message} = this.props
-        const {departmentMessage}=this.props
-        const {hadDepartment} =this.props
+        const {entities,departmentInfo,Actions,item,index} = this.props
+        let {title} = departmentInfo
+        title = Object.keys(title).map((item)=>{
+            return title[item]
+        })
+        console.log(index)
         return(
             <div className = "lableButton">
-                <div className="divTitle">{message.title}</div>
-                <p className="buttonButton" onClick={this.handleonClick} >{message.button}</p>
+                <div className="divTitle">{item.title}{' '}:{' '}{item.description} </div>
+                <p className="buttonButton" onClick={this.handleonClick} >权限管理</p>
                 <AuthorityManagement
-                    message={message} 
-                    isDailog = {this.state.isDailog}
+                    entities = {entities}
+                    departmentInfo = {departmentInfo}
+                    Actions = {Actions}
+                    isDailog={this.state.isDailog}
                     onClick1={this.handleonClick}
-                    departmentMessage={departmentMessage}
-                    hadDepartment={hadDepartment}
-                    handleonClickDailog={this.props.onDailog}
+                    item={title[index]}
                 />
             </div>
         )
