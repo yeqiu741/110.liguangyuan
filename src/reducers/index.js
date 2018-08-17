@@ -1,7 +1,8 @@
-import {combineReducers} from 'redux'
-import entities from './entities.js'
-import  departmentInfo from './departmentInfo'
+import { combineReducers } from 'redux';
+import restart from './restart';
+import score from './score';
+
 export default combineReducers({
-  entities,
-  departmentInfo
-})
+  restart,
+  score
+});

@@ -1,0 +1,45 @@
+.tip{
+    display: flex;
+    margin: 50px  auto 0;
+    width: 446px;
+    border:1px solid black;
+}
+.gameName{
+    font-size: 60px;
+    font-weight: bold;
+}
+.hint{
+    margin:0 auto;
+    flex-shrink: 0;
+}
+.pcRule{
+    font-size: 10px;
+}
+.phoneRule{
+    font-size: 10px;
+}
+.scoreBoard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin:0 auto;
+}
+.scoreBoard button{
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: #fff;
+}
+.scoreBoard div{
+    width: 80px;
+    height: 45px;
+    text-align: center;
+    border:1px solid gray;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top:20px;
+    margin-right: 5px;
+}
