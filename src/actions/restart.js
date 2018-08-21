@@ -7,6 +7,12 @@ export function restart(data) {
     data
   };
 }
+export function oneRandNumber(data) {
+  return {
+    type: actionType.ONERANDNUMBER,
+    data
+  };
+}
 
 export function moveLeft(data) {
   return {

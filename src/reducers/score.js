@@ -2,7 +2,8 @@ import * as actionType from '../const/actionType';
 
 const init_state = {
   lastScore: 0,
-  bestScore: 0
+  bestScore: 0,
+  addScoreAnimation: 0
 };
 /* eslint-disable */
 const score = (state = init_state, action) => {
@@ -10,8 +11,9 @@ const score = (state = init_state, action) => {
     case actionType.ADDLASTSCORE:
       let number = {...state};
       const newlastScore = action.data;
+      const addScoreAnimation = action.data;
       let lastScore = number.lastScore + newlastScore;
-      return Object.assign({}, state, { lastScore });
+      return Object.assign({}, state, { lastScore, addScoreAnimation});
     case actionType.ADDBESTSCORE:
       const bestScore = action.data;
       return Object.assign({},state,{ bestScore });

@@ -36,6 +36,11 @@ const fetNumber = (state = init_state, action) => {
     case actionType.MOVEDOWN:
         const moveDown = action.data;
         return Object.assign({},state,{moveDown});
+    case actionType.ONERANDNUMBER:
+        let newArrayState = { ...state };
+        newArrayState.number[action.data[0]][action.data[1]] = Math.random() > 0.8 ? 4:2;
+        const number = newArrayState.number;
+        return Object.assign({},state,{ number });
     default:
       return state;
   }
