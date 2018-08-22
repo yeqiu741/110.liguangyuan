@@ -1,32 +1,46 @@
 .gameContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 446px;
     height: 446px;
     border:1px solid gray;
     margin:0 auto;
     background-color: gray;
 }
-.gameContainer div{
-    width: 100px;
-    height: 100px;
+.gameContainer_box{
+    margin:2%;
+    width: 96%;
+    height: 96%;
+}
+.rowBox{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+.rowBox div{
+    margin:auto;
+    width: 21%;
+    height: 86%;
     border:1px solid yellow;
     border-radius: 20px;
-    margin:5px;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
     line-height: 100px;
 }
+
 @media screen and (max-width:415px){
     .gameContainer{
-        width: 375px;
+        width: 100%;
         height: 375px;
     }
-    .gameContainer div{
-        width: 82px;
-        height: 82px;
+    .gameContainer_box{
+        margin:1%;
+        width: 98%;
+        height: 98%;
+    }
+    .rowBox div{
+        line-height: 200%;
     }
 }
 
@@ -71,7 +85,7 @@
     -o-animation: myfirst .5s;
 }
 .animation32{
-    background-color: red;
+    background-color: #db7093;
     width: 100px;
     height: 100px;
     animation: myfirst .5s;
@@ -89,34 +103,7 @@
     -o-animation: myfirst .5s;
 }
 .animation128{
-    background-color: #425066;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
-.animation128{
-    background-color: #8d4bbb ;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
-.animation128{
-    background-color: #2edfa3;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
-.animation128{
-    background-color: #2add9c;
+    background-color: #8F8fbd;
     width: 100px;
     height: 100px;
     animation: myfirst .5s;
@@ -125,7 +112,7 @@
     -o-animation: myfirst .5s;
 }
 .animation256{
-    background-color: #00e079;
+    background-color: #8d4bbb ;
     width: 100px;
     height: 100px;
     animation: myfirst .5s;
@@ -134,7 +121,7 @@
     -o-animation: myfirst .5s;
 }
 .animation512{
-    background-color: #a78e44;
+    background-color: #2edfa3;
     width: 100px;
     height: 100px;
     animation: myfirst .5s;
@@ -142,6 +129,7 @@
     -webkit-animation: myfirst .5s;
     -o-animation: myfirst .5s;
 }
+
 .animation1024{
     background-color: #ae7000;
     width: 100px;

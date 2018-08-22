@@ -8,6 +8,7 @@ const init_state = {
     [0, 0, 0, 0],
     [0, 0, 0, 0]
   ]
+
 };
 /* eslint-disable */
 const fetNumber = (state = init_state, action) => {
